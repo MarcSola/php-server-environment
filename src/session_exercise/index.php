@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +23,7 @@
             <li><a href="#">Contact</a></li>
         </ul>
         <div class="">
-            <form action="validate.php" method="POST">
+            <form action="./includes/validate.php" method="POST">
                 <input type="text" name="email" placeholder="Username/E-mail">
                 <input type="password" name="pwd" placeholder="Password">
                 <button type="submit" name="login-submit">Login</button>

@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +22,32 @@
             <li><a href="#">About me</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <div class="">
-            <form action="close_session.php" method="POST">
-                <button type="submit" name="logout-submit">Logout</button>
-            </form>
-        </div>
+
+        <?php 
+            if(isset($_GET["login"]) && $_GET["login"] == "success"){
+                
+                echo "
+                <div class=''>
+                    <form action='./includes/close_session.php' method='POST'>
+                        <button type='submit' name='logout-submit'>Logout</button>
+                    </form>
+                </div>";
+            }
+        ?>
+        
         </nav>
     </header>
     <main>
         <div>
-            <p> You are logged in :D !!! </p>
-            <p> This is a private section :/. To access it, please login.</p>
+        <?php 
+            if(isset($_GET["login"]) && $_GET["login"] == "success"){
+                
+                echo "<p> You are logged in :D !!! </p>";
+            }else{
+                
+                echo "<p> This is a private section :/. To access it, please login.</p>";
+            }
+        ?>
         </div>
         
     </main>
