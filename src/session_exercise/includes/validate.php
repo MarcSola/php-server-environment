@@ -36,7 +36,7 @@
                     session_start();
                     $_SESSION["username"] = $username;
                     $_SESSION["pwd"] = $DB_hash_pwd;
-                    // echo $_SESSION["username"]."<br>".$_SESSION["pwd"];
+
                     header("Location: ../panel.php?login=success");
                     exit();
 

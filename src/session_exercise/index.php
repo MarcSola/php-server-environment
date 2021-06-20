@@ -13,29 +13,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index.php</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="">
-        <a href="#">
-            <img src="../../assets/img/assembler.png" alt="logo">
-        </a>
-        <ul class="">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="">
-            <form action="./includes/validate.php" method="POST">
-                <input type="text" name="email" placeholder="Username/E-mail">
-                <input type="password" name="pwd" placeholder="Password">
-                <button type="submit" name="login-submit">Login</button>
-            </form>
+    <main>
+    <div class="main-container">
+        <form action="./includes/validate.php" method="POST">
+
+            <h1>Sign in</h1>
+            <div class ='input-wrapper'>
+                <input id="email" type="text" name="email" autocomplete="off" placeholder="Username/E-mail">
+                <!-- <label for="email">Email address</label> -->
+            </div>
+            <div class ='input-wrapper'>
+                <input id="password" type="password" name="pwd" autocomplete="off" placeholder="Password">
+                <!-- <label for="email">Password</label> -->
+            </div>
+            <button class="submit-btn" type="submit" name="login-submit">Login</button>
+        </form>
+        <?php 
+
+            if(isset($_GET['error'])){
+
+                if ($_GET['error'] == "emptyfields"){
+
+                    echo "<div class='alert'> <h2>Fill all empty fields</h2></div>";
+
+                }elseif($_GET['error'] == "invaliduser"){
+
+                    echo "<div class='alert'> <h2>This user is invalid. <br>Input a valid user.</h2></div>";
+
+                }elseif($_GET['error'] == "invalidpwd"){
+
+                    echo "<div class='alert'> <h2> Password is not correct . <br>Input the correct password.</h2></div>";
+
+                }
+                
+            } 
+
+            ?>
         </div>
-        </nav>
-    </header>
-    <main></main>
-    <footer></footer>
+    </main>
 </body>
 </html>
