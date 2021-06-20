@@ -1,5 +1,9 @@
 <?php 
     session_start();
+    if(isset($_SESSION['username']) && isset($_SESSION['pwd'])){
+
+        header('Location: ./panel.php?login=success');
+    }
 ?>
 
 <!DOCTYPE html>

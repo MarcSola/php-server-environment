@@ -24,7 +24,7 @@
         </ul>
 
         <?php 
-            if(isset($_GET["login"]) && $_GET["login"] == "success"){
+            if(isset($_SESSION['username']) && isset($_SESSION['pwd'])){
                 
                 echo "
                 <div class=''>
