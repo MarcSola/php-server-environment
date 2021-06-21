@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index.php</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
 </head>
 <body>
     <main>
@@ -22,7 +22,7 @@
 
             <h1>Sign in</h1>
             <div class ='input-wrapper'>
-                <input id="email" type="text" name="email" autocomplete="off" placeholder="Username/E-mail">
+                <input id="email" type="text" name="email"  placeholder="Username/E-mail">
                 <!-- <label for="email">Email address</label> -->
             </div>
             <div class ='input-wrapper'>

@@ -73,3 +73,28 @@ body {
   color: rgb(247, 88, 88);
   text-align: center;
 }
+
+.main-panel-wrapper {
+  position: absolute;
+  width: 50vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.login-message {
+  padding: 10px;
+  width: 100%;
+  border: 3px solid #4cafaf;
+  color: #4cafaf;
+  text-align: center;
+}
+
+.signin-message {
+  padding: 10px;
+  width: 100%;
+  border: 3px solid rgb(247, 88, 88);
+  color: rgb(247, 88, 88);
+  text-align: center;
+}
